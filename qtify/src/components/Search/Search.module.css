@@ -12,7 +12,6 @@ padding: 14px 20px;
 border-radius: 0px 8px 8px 0px;
 border: 1px 0px 0px 0px;
 }
-
 .searchButton{    
 border-radius: 0px 8px 8px 0px;
 border: 1px  var(--color-black);
@@ -20,7 +19,6 @@ padding: 14px 20px;
 cursor: pointer;
 border-left: none;
 height:100%
-
 
 }*/
 .wrapper{
@@ -30,7 +28,7 @@ height:100%
     width: 568px;    
       
 }
-.searchButton{
+.searchButton{ 
     width: 66px;
     height: 48px;      
     opacity: 0px;  
