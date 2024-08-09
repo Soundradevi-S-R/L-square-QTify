@@ -1,7 +1,7 @@
 .herosection{
     display: flex; 
     margin:auto;
-    background-color: var(--color-white);
+    background-color: var(--color-black);
     height: 270px;
     align-items: center;
     justify-content: center;
@@ -14,8 +14,7 @@
   height: 212px;
   margin: auto;   
   align-items: center;
-  justify-content: space-between;
-  background-color: var(--color-black);
+  justify-content: space-between; 
   gap: 30px;  
   text-align: center;   
 }
