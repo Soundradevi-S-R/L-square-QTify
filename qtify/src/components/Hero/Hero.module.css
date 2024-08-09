@@ -1,0 +1,36 @@
+.herosection{
+    display: flex; 
+    margin:auto;
+    background-color: var(--color-white);
+    height: 270px;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+.herodiv{ 
+  display: flex;
+  width: 799px;
+  height: 212px;
+  margin: auto;   
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--color-black);
+  gap: 30px;  
+  text-align: center;   
+}
+.herotext{
+
+ font-family: 'Poppins', sans-serif; 
+ font-size: 32px;
+ font-weight: 600;
+ line-height: 48px;
+ 
+}
+
+.heroimg{
+   
+  width: 212px;
+  height: 212px;
+
+}
