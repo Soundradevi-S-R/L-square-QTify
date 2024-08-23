@@ -1,0 +1,32 @@
+.sectiondiv{
+    background-color: var(--color-black);
+    margin-bottom: 32px;
+}
+
+.header{
+
+    display: flex;
+    justify-content: space-between;
+    align-items:baseline;
+    height: 30px;
+    margin : 0px 32px;
+    padding: 0px 30px 50px 30px;
+   
+}
+.toggleText{
+
+    color: var(--color-primary);
+    cursor: pointer;
+}
+.cardWrapper{
+margin-top:18px;
+margin : 0px 32px
+
+}
+.flexwrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap:40px;
+    height:auto;
+    padding: 0px 30px;
+}

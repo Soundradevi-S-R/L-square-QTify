@@ -5,6 +5,7 @@ import Logo from "../Logo/Logo";
 import Button from "../Button/Button";
 import Search from "../Search/Search";
 import  styles from "./Navbar.module.css";
+import { Link } from "react-router-dom";
 
 
 
@@ -14,7 +15,7 @@ function Navbar () {
     
      
        <nav className={styles.navbar}>
-        <a href="/"> <Logo/></a> 
+        <Link to="/"> <Logo/></Link> 
         <Search   placeholder="Search a album of your choice"/>
         <Button>Give Feedback</Button>
         

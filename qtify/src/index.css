@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans&family=Poppins&display=swap");
+
 :root{
 
   --color-primary :#34c94b;
@@ -43,4 +45,14 @@ body{
  #root,
 #__next{
 isolation:isolate;
+}
+a,
+a:focus,
+a:active,
+a:hover{
+  text-decoration: none;
+  color:inherit;
+}
+.swiper-slide{
+  width:auto !important;
 }

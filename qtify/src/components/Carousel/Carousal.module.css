@@ -1,0 +1,19 @@
+.carousel { 
+
+    width: 1376px;
+    height: 280px;
+    display: flex; /* Set inline elements */
+    align-items: center; /* Centering elements */
+
+  }
+ 
+  
+
+  .carouselwrapper {
+    position: relative;  
+   
+  }
+
+ 
+  
+  
