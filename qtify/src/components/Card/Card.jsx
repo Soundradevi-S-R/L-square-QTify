@@ -6,18 +6,20 @@ import { Link } from "react-router-dom";
 
 const Card=({data,type})=>{
 
-    console.log("ALBUM TYPE",type);
+   
 
     const getCard = (type) => {        
 
         switch (type){
             case  'album' : {
+
+                console.log("ALBUM TYPE",type);
                    const {image,title,follows,slug,songs} = data; // removing slug
 
                     return(
 
                     <Tooltip title={`${songs.length} Songs`} placement="top" arrow>
-                        <Link to={`/album/${slug}`} >
+                        {/* <Link to={`/album/${slug}`} > */}
                             <div className={styles.wrapper}>
                                 <div className={styles.card}>
                                     <img src={image} alt="album" />
@@ -34,28 +36,31 @@ const Card=({data,type})=>{
                                     <p>{title}</p>
                                 </div>
                             </div>
-                        </Link>
+                        {/* </Link> */}
                     </Tooltip>
                         
                     );
 
             }
             case "song" :{
+                console.log("SONG TYPE",type);
                 const {image,likes,title} = data;
                 return(                
                        
-                       <div className={styles.wrapper}>
-
-                            <div className={styles.card}>
-                                <img src={image} alt="song" loading="lazy"/>                                        
-                                <div className={styles.banner}>
-                                    <Chip label={`${likes} Likes`} size="small" className={styles.pill}/>
-                                </div>                   
+                    <div className={styles.wrapper}>
+                    <div className={styles.card}>
+                        <img src={image} alt="album" loading='lazy' />
+                        <div className={styles.banner}>
+                            <div className={styles.pill}>
+                                <p>{likes} Likes</p>
                             </div>
-                            <div className={styles.titlewrap}>
-                                <p>{title}</p>
-                            </div>   
-                        </div>                 
+                        </div>
+                    </div>
+                    <div className={styles.titlewrap}>
+                        <p>{title}</p>
+                    </div>
+
+                </div>       
                    );
             }
             default :

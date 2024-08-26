@@ -1,11 +1,10 @@
 import React from "react";
 import './App.css';
 import Navbar from "../src/components/Navbar/Navbar";
-import Hero from "./components/Hero/Hero";
-import Section from "./components/Section/Section";
+
 import { Outlet } from "react-router-dom";  
 import { useState,useEffect } from 'react';
-import {fetchTopAlbums,fetchNewAlbums} from "./api/api";
+import {fetchTopAlbums,fetchNewAlbums,fetchSongs} from "./api/api";
 import { StyledEngineProvider } from "@mui/material";
 
 function App() {
@@ -26,26 +25,28 @@ function App() {
 
    generateData("topAlbums",fetchTopAlbums);
    generateData("newAlbums",fetchNewAlbums);
+   generateData("songs",fetchSongs);
 
    console.log("complete  useEffect >>>");
   },[]);
 
 
-  const{topAlbums =[],newAlbums =[]} = data; //setting default values to the data inputs to avoid undefined error
+  const { topAlbums = [], newAlbums = [], songs =[] } = data; //setting default values to the data inputs to avoid undefined error
 
   return (
 
      <StyledEngineProvider> 
       <Navbar/>
-      <Outlet context={ {data: {topAlbums, newAlbums} } }/> 
+      <Outlet context={ {data: {topAlbums, newAlbums, songs} } }/> 
      
       </StyledEngineProvider>
                                              
   );
 
-     {/* This outlet children will replace the pages as per the path- default will be homepage */}
-{/* this usecontext hook used to share the data across the childrens. */}
+     
   
 }
 
 export default App;
+//This outlet children will replace the pages as per the path- default will be homepage 
+//this usecontext hook used to share the data across the childrens. 
